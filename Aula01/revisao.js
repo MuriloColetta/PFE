@@ -54,13 +54,38 @@ function calcularSaldo() {
 function limparNomeContato() {
     let nome = document.getElementById('nome').value
     let resultado = nome.trim().toUpperCase()
-    let qunatidade = resultado.split(' ').length
+    let quantidade = resultado.split(' ').length
 
     alert(`String formada: ${resultado}`)
-    alert(`Quantidade de palavras: ${qunatidade}`)
+    alert(`Quantidade de palavras: ${quantidade}`)
+}
+
+// Exercício 4
+function calcularTempo() {
+    const dataHoje = new Date ()
+    const dataEvento = new Date (2026, 2, 25)
+
+    const ms = dataEvento - dataHoje
+    const dias = ms / 86400000
+    const diasArredondado = Math.ceil(dias)
+
+    let tempo = document.getElementById('tempo')
+    tempo.innerHTML = `Faltam ${diasArredondado} dias para o seu compromisso!`
 }
 
 // Exercício 5
-function agendar() {
+function filtrarAgenda() {
     let agendaHorarios = [8, 12, 25, 15, -2, 20]
+    let mensagem = document.getElementById('mensagem')
+    let contagemValidos = 0
+
+    for (h of agendaHorarios)  {
+        if (h < 0 || h > 23) {
+            mensagem.innerHTML += `Atenção: O horário ${h}h é inválido! <br>`
+        } else {
+            mensagem.innerHTML += `Compromisso agendado para as ${h}h <br>`
+            contagemValidos++;
+       }
+    }
+    mensagem.innerHTML = `Numero de horários validos: ${contagemValidos}`
 }

@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ex1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 700px;
+    border-radius: 14px;
+}
+
+.ex1 input {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.ex1 button {
+    padding: 10px;
+    border-radius: 20px;
+}
