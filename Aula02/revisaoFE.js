@@ -14,12 +14,32 @@ function transformar() {
 }
 
 // Exercício 2
-let nome = document.getElementById('nome').value
-let nomeCartao = document.getElementById('nomeCartao')
-let cargo = document.getElementById('cargo').value
-let cargoCartao = document.getElementById('cargoCartao')
-let cor = document.getElementById('cor').value
+// let nome = document.getElementById('nome').value
+// let nomeCartao = document.getElementById('nomeCartao')
+// let cargo = document.getElementById('cargo').value
+// let cargoCartao = document.getElementById('cargoCartao')
+// let cor = document.getElementById('cor').value
 
-nomeCartao.innerHTML = nome
-cargoCartao.innerHTML = cargo
-document.getElementById('cartaoFundo').style.backgroundColor = cor
+// nomeCartao.innerHTML = nome
+// cargoCartao.innerHTML = cargo
+// document.getElementById('cartaoFundo').style.backgroundColor = cor
+
+const inputNome = document.getElementById('nome');
+const inputCargo = document.getElementById('cargo');
+const inputCor = document.getElementById('cor');
+
+const nomeCartao = document.getElementById('nomeCartao');
+const cargoCartao = document.getElementById('cargoCartao');
+const cor = document.getElementById('cartaoFundo');
+
+inputNome.addEventListener('input', () => {
+    nomeCartao.innerText = inputNome.value;
+});
+
+inputCargo.addEventListener('input', () => {
+    cargoCartao.innerText = inputCargo.value;
+});
+
+inputCor.addEventListener('input', () => {
+    cor.style.backgroundColor = inputCor.value;
+});
