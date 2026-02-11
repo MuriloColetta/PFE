@@ -14,16 +14,6 @@ function transformar() {
 }
 
 // Exercício 2
-// let nome = document.getElementById('nome').value
-// let nomeCartao = document.getElementById('nomeCartao')
-// let cargo = document.getElementById('cargo').value
-// let cargoCartao = document.getElementById('cargoCartao')
-// let cor = document.getElementById('cor').value
-
-// nomeCartao.innerHTML = nome
-// cargoCartao.innerHTML = cargo
-// document.getElementById('cartaoFundo').style.backgroundColor = cor
-
 const inputNome = document.getElementById('nome');
 const inputCargo = document.getElementById('cargo');
 const inputCor = document.getElementById('cor');
