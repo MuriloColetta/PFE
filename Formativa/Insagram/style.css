@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    margin: 0;
+}
+
+.menu {
+    background-color: red;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .logo i {
+    font-size: 150%;
+}
+
+.menu i {
+    font-size: 120%;
+}
+
+.menu p {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.feed {
+    height: 100%;
+    width: 65%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+.storys {
+    background-color: aqua;
+    height: 13%;
+    max-width: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.storys-perfil {
+    background-color: brown;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.sugestao {
+    background-color: yellow;
+    height: 100%;
+    width: 20%;
+}
