@@ -1,0 +1,270 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 70px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 100;
+}
+
+.menu:hover {
+    width: 230px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu-item i {
+    font-size: 22px;
+    min-width: 30px;
+}
+
+.menu-item span {
+    opacity: 0;
+    color: white;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.menu:hover .menu-item span {
+    opacity: 1;
+}
+
+.menu-item:hover {
+    background-color: rgb(30,30,30);
+    border-radius: 10px;
+}
+
+.feed {
+    height: 100%;
+    width: 65%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-shrink: 0;
+    margin-left: 200px;
+}
+
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+.storys {
+    background-color: black;
+    height: 13%;
+    max-width: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.storys-foto {
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 4px solid orange;
+}
+
+.story-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.publicacoes {
+    max-width: 100%;
+    background-color: black;
+    margin-left: 300px;
+    margin-right: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.publicacao {
+    width: 75%;
+    height: 77vh;
+    background-color: black;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.perfil-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usuario-tempo {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.usuario {
+    font-weight: bold;
+    color: white;
+}
+
+.tempo {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.foto {
+    flex-grow: 1;
+    position: relative;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.foto img, .foto video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.foto.carrossel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 0.4s ease;
+    height: 100%;
+}
+
+.carrossel-container img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+.reacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.reacao p {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.descricao {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.sugestao {
+    background-color: yellow;
+    height: 100%;
+    width: 20%;
+}
+
+.mensagens {
+    background-color: black;
+    height: 100%;
+    width: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column-reverse; 
+}
+
+.mensagem {
+    background-color: rgb(30,30,30);
+    width: 85%;
+    height: 60px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px; 
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.mensagem:hover {
+    background-color: rgb(66, 66, 66);
+}

@@ -37,7 +37,7 @@ const App = () => {
           <button style={styles.button} onClick={() => setEtapa(2)}>3. Resultado</button>
         </div>
       </section>
-
+ 
       {/* Componente de Quiz Simples */}
       <Quiz />
     </div>
