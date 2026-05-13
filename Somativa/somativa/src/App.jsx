@@ -157,7 +157,7 @@ function App() {
             ${item.status.toLowerCase().replace(" ", "-")}`}
           >
             <div className="event-content">
-              <h3>{item.title}</h3>
+              <h3 className={item.status === "Encerrado" ? "titulo-encerrado" : ""}>{item.title}</h3>
               <span className="event-tag">Tipo: {item.type}</span>
               <span className="status-badge">Status: {item.status}</span>
               <span className="vagas">Vagas disponíveis: {item.vagas}</span>
@@ -183,7 +183,7 @@ function App() {
         className="floating-btn"
         onClick={() => setShowModal(true)}
       >
-        <img src="/.../public/favicon-css"/>
+        <img src="\public\favicon_css.png" className="imagem-button"/>
       </button>
       {showModal && (
         <div className="modal-overlay">
@@ -191,8 +191,9 @@ function App() {
             <h2>Alterações Visuais do Sistema</h2>
 
             <ul>
-              <li>Cards com animação hover e sombras dinâmicas.</li>
-              <li>Botão flutuante interativo no canto inferior direito.</li>
+              <li>Cards com animação hover e sombras.</li>
+              <li>Botões como animação hover.</li>
+              <li>O título do evento fica riscado quando encerrado.</li>
             </ul>
 
             <button
